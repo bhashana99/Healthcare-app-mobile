@@ -20,6 +20,17 @@ public class FindDoctorActivity extends AppCompatActivity {
             public void onClick(View view) {
                 startActivity(new Intent(FindDoctorActivity.this,HomeActivity.class));
             }
+
+        });
+
+        CardView familyPhysician = findViewById(R.id.cardFDFamilyPhysician);
+        familyPhysician.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent it=new Intent(FindDoctorActivity.this,DoctorDetailsActivity.class);
+                it.putExtra("title","Family Physician");
+                startActivity(it);
+            }
         });
     }
 }

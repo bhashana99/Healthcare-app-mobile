@@ -32,5 +32,13 @@ public class HomeActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),"Logout success",Toast.LENGTH_SHORT).show();
             }
         });
+
+        CardView findDoctor = findViewById(R.id.cardFindDoctor);
+        findDoctor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this,FindDoctorActivity.class));
+            }
+        });
           }
 }
